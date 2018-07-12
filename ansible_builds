@@ -1,6 +1,10 @@
 
 Note to ansible_builds
 
+________________
+
+##Step 1
+
 
 
 server create --flavor b7288efb-9e0f-4dae-b020-3dc2e4942987 --image 8ac427d4-797d-4d6f-bb78-78951bd4d762 --key-name gcb-gs-keytest --user-data /home/gss25/Documents/Code/hello/.vscode/openStackConfigBuild/CentosVim.sh \--security-group gcb-gs-SecurityTest \gcb-gs-domAnsible
@@ -16,6 +20,13 @@ server create --flavor b7288efb-9e0f-4dae-b020-3dc2e4942987 --image 8ac427d4-797
 server create --flavor b7288efb-9e0f-4dae-b020-3dc2e4942987 --image 8ac427d4-797d-4d6f-bb78-78951bd4d762 --key-name gcb-gs-keytest --user-data /home/gss25/Documents/Code/hello/.vscode/openStackConfigBuild/CentosVim.sh \--security-group gcb-gs-SecurityTest \gcb-gs-test2
 
 
+
+__________________
+##Step 2
+
+
+
+
 From your desktop cd into .ssh: 
 
 log into gcb-gs-domAnsible from desktop.
@@ -27,7 +38,8 @@ log into gcb-gs-test1 from desktop.
 log into gcb-gs-test2 from desktop.
 [gss25@GCB-GS-29080 .ssh]$ ssh -i gcb-gs-keytest.pem gss25@10.16.72.123
 
-
+________________
+##Step 3
 
 ansible-playbook -i /etc/ansible/hosts webserver.yaml --ask-sudo-pass 
 
